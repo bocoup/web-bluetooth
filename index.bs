@@ -4965,6 +4965,7 @@ The [=remote end steps=] with |command parameters| are:
 1. Let |context| be the result of [=trying=] to [=get a browsing context=] with |context id|.
 1. Let |prompt id| be the value of the <code>prompt</code> field of |command parameters|.
 1. Let |prompt| be the result of [=trying=] to [=get a prompt=] with |prompt id|.
+1. Let |accept| be the value of the <code>accept</code> field of |command parameters|.
 1. If |accept| is true:
     1. Let |device id| be the value of the <code>device</code> field of |command parameters|.
     1. Let |device| be the result of [=trying=] to [=match a device in prompt=] for |device id|.
