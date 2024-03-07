@@ -4916,6 +4916,19 @@ To <dfn>get list of prompt devices</dfn> given |prompt|:
 
 </div>
 
+### Errors ### {#bidi-errors}
+
+This specification extends the set of [=error codes=] from
+[[WEBDRIVER-BIDI|WebDriver BiDi]] with the following additional codes:
+
+<dl>
+  <dt><dfn>no such device</dfn>
+  <dd>Tried to reference an unknown [=Bluetooth device=].
+
+  <dt><dfn>no such prompt</dfn>
+  <dd>Tried to reference an unknown prompt.
+</dl>
+
 ### Commands ### {#bidi-commands}
 
 #### The bluetooth.handleRequestDevicePrompt Command #### {#bluetooth-handlerequestdeviceprompt-command}
