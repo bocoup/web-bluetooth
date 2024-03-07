@@ -4925,6 +4925,8 @@ bluetooth.HandleRequestDevicePromptCancelParameters = {
 }
 ```
 
+The remote end steps with command parameters are:
+
 1. Let context id be the value of the context field of command parameters.
 1. Let context be the result of trying to get a browsing context with context id.
 1. Let prompt id be the value of the prompt field of command parameters.
@@ -4958,6 +4960,8 @@ bluetooth.RequestDevicePromptOpenedParameters = {
 }
 ```
 
+The remote end event trigger is:
+
 1. Let context be window's browsing context.
 1. Let context id be the browsing context id for context.
 1. Let prompt be browsing context's prompt.
@@ -4985,6 +4989,8 @@ bluetooth.RequestDevicePromptUpdatedParameters = {
 }
 ```
 
+The remote end event trigger is:
+
 1. Let context be window's browsing context.
 1. Let context id be the browsing context id for context.
 1. Let prompt be browsing context's prompt.
@@ -5009,6 +5015,8 @@ bluetooth.RequestDevicePromptClosedParameters = {
    prompt: bluetooth.RequestDevicePrompt,
 }
 ```
+
+The remote end event trigger is:
 
 1. Let context be window's browsing context.
 1. Let context id be the browsing context id for context.
