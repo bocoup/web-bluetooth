@@ -4827,17 +4827,17 @@ attribute on the {{Navigator}} object may be used.
 
 The <a>default allowlist</a> for this feature is <code>["self"]</code>.
 
-# Automated testing
+# Automated testing # {#automated-testing}
 
 For the purposes of user-agent automation and application testing, this document defines extensions to the WebDriver-BiDi specification.
 
-## The bluetooth module
+## The bluetooth module ## {#bluetooth-module}
 
 The bluetooth module contains commands for managing the remote end Bluetooth behavior.
 
-### Types
+### Types ### {#bidi-types}
 
-#### The bluetooth.RequestDevice Type
+#### The bluetooth.RequestDevice Type #### {#bluetooth-requestdevice-type}
 
 ```cddl
 bluetooth.RequestDevice = text
@@ -4845,7 +4845,7 @@ bluetooth.RequestDevice = text
 
 The bluetooth.RequestDevice is an identifier for a single device in a request device prompt.
 
-#### The bluetooth.RequestDeviceInfo Type
+#### The bluetooth.RequestDeviceInfo Type #### {#bluetooth-requestdeviceinfo-type}
 
 ```cddl
 bluetooth.RequestDeviceInfo = {
@@ -4862,7 +4862,7 @@ To `serialize device` given device:
 1. Let name be the name of device.
 1. Return a map matching the bluetooth.RequestDeviceInfo production, with the id field set to id, and the name field set to name.
 
-#### The bluetooth.RequestDevicePrompt Type
+#### The bluetooth.RequestDevicePrompt Type #### {#bluetooth-requestdeviceprompt-type}
 
 ```cddl
 bluetooth.RequestDevicePrompt = text
@@ -4896,9 +4896,9 @@ To `get list of prompt devices` given prompt:
    1. Append the result of serialize device with device.
 1. Return success with data devices.
 
-### Commands
+### Commands ### {#bidi-commands}
 
-#### The bluetooth.handleRequestDevicePrompt Command
+#### The bluetooth.handleRequestDevicePrompt Command #### {#bluetooth-handlerequestdeviceprompt-command}
 
 ```cddl
 bluetooth.HandleRequestDevicePrompt = (
@@ -4941,9 +4941,9 @@ bluetooth.HandleRequestDevicePromptCancelParameters = {
 
 1. Return success with data null.
 
-### Events
+### Events ### {#bidi-events}
 
-#### The bluetooth.requestDevicePromptOpened Event
+#### The bluetooth.requestDevicePromptOpened Event #### {#bluetooth-requestdevicepromptopened-event}
 
 ```cddl
 bluetooth.RequestDevicePromptOpened = (
@@ -4970,7 +4970,7 @@ bluetooth.RequestDevicePromptOpenedParameters = {
 1. For each session in the set of sessions for which an event is enabled given "bluetooth.requestDevicePromptOpened" and related browsing contexts:
    1. Emit an event with session and body.
 
-#### The bluetooth.requestDevicePromptUpdated Event
+#### The bluetooth.requestDevicePromptUpdated Event #### {#bluetooth-requestdevicepromptupdated-event}
 
 ```cddl
 bluetooth.RequestDevicePromptUpdated = (
@@ -4996,7 +4996,7 @@ bluetooth.RequestDevicePromptUpdatedParameters = {
 1. For each session in the set of sessions for which an event is enabled given "bluetooth.RequestDevicePromptUpdated" and related browsing contexts:
    1. Emit an event with session and body.
 
-#### The bluetooth.requestDevicePromptClosed Event
+#### The bluetooth.requestDevicePromptClosed Event #### {#bluetooth-requestdevicepromptclosed-event}
 
 ```cddl
 bluetooth.RequestDevicePromptClosed = (
