@@ -4833,7 +4833,7 @@ For the purposes of user-agent automation and application testing, this document
 
 ## The bluetooth module
 
-The bluetooth module contains commands for managing the remote end bluetooth behavior.
+The bluetooth module contains commands for managing the remote end Bluetooth behavior.
 
 ### Types
 
@@ -4868,7 +4868,7 @@ To `serialize device` given device:
 bluetooth.RequestDevicePrompt = text
 ```
 
-The bluetooth.RequestDevicePrompt is an identifer for a single prompt.
+The bluetooth.RequestDevicePrompt is an identifier for a single prompt.
 
 A remote end has a map of browsing context to zero or one request device prompts.
 
@@ -4939,7 +4939,7 @@ bluetooth.HandleRequestDevicePromptCancelParameters = {
 
      1. Dismiss the prompt.
 
-1. Return success with data null
+1. Return success with data null.
 
 ### Events
 
@@ -4959,12 +4959,12 @@ bluetooth.RequestDevicePromptOpenedParameters = {
 ```
 
 1. Let context be window's browsing context.
-1. Let context id be the brwosing context id for context.
+1. Let context id be the browsing context id for context.
 1. Let prompt be browsing context's prompt.
 1. Let prompt id be the prompt id for prompt.
 1. Add prompt to map of browsing context to prompts.
 1. Let devices be `get list of prompt devices` given prompt.
-1. Let params be a map matching the bluetooth.RequestDevicePromptOpenedParameters prodcution with the context field set to context id, the prompt field set to prompt id, and the devices field set to devices.
+1. Let params be a map matching the bluetooth.RequestDevicePromptOpenedParameters production with the context field set to context id, the prompt field set to prompt id, and the devices field set to devices.
 1. Let body be a map matching the bluetooth.RequestDevicePromptOpened production, with the params field set to params.
 1. Let related browsing contexts be a set containing context.
 1. For each session in the set of sessions for which an event is enabled given "bluetooth.requestDevicePromptOpened" and related browsing contexts:
@@ -4986,11 +4986,11 @@ bluetooth.RequestDevicePromptUpdatedParameters = {
 ```
 
 1. Let context be window's browsing context.
-1. Let context id be the brwosing context id for context.
+1. Let context id be the browsing context id for context.
 1. Let prompt be browsing context's prompt.
 1. Let prompt id be the prompt id for prompt.
 1. Let devices be `get list of prompt devices` given prompt.
-1. Let params be a map matching the bluetooth.RequestDevicePromptUpdatedParameters prodcution with the context field set to context id, the prompt field set to prompt id, and the devices field set to devices.
+1. Let params be a map matching the bluetooth.RequestDevicePromptUpdatedParameters production with the context field set to context id, the prompt field set to prompt id, and the devices field set to devices.
 1. Let body be a map matching the bluetooth.RequestDevicePromptUpdated production, with the params field set to params.
 1. Let related browsing contexts be a set containing context.
 1. For each session in the set of sessions for which an event is enabled given "bluetooth.RequestDevicePromptUpdated" and related browsing contexts:
@@ -5011,11 +5011,11 @@ bluetooth.RequestDevicePromptClosedParameters = {
 ```
 
 1. Let context be window's browsing context.
-1. Let context id be the brwosing context id for context.
+1. Let context id be the browsing context id for context.
 1. Let prompt be browsing context's prompt.
 1. Let prompt id be the prompt id for prompt.
 1. Remove prompt from map of browsing context to prompts.
-1. Let params be a map matching the bluetooth.RequestDevicePromptClosedParameters prodcution with the context field set to context id, and the prompt field set to prompt id.
+1. Let params be a map matching the bluetooth.RequestDevicePromptClosedParameters production with the context field set to context id, and the prompt field set to prompt id.
 1. Let body be a map matching the bluetooth.RequestDevicePromptClosed production, with the params field set to params.
 1. Let related browsing contexts be a set containing context.
 1. For each session in the set of sessions for which an event is enabled given "bluetooth.requestDevicePromptClosed" and related browsing contexts:
