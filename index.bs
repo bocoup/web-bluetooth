@@ -109,6 +109,7 @@ spec: PAGE-VISIBILITY; urlPrefix: https://www.w3.org/TR/page-visibility-2/#
 spec: WEBDRIVER; urlPrefix: https://w3c.github.io/webdriver/
     type: dfn
         text: error; url: dfn-errors
+        text: local end; url: dfn-local-ends
 
 <!-- WebDriver BiDi should be updated to export this definition. -->
 <!-- https://github.com/speced/bikeshed/issues/2802 -->
@@ -4980,6 +4981,22 @@ The [=remote end steps=] with |command parameters| are:
     1. Dismiss |prompt|.
 1. Return [=success=] with data null.
 
+</div>
+
+<div class="example">
+A [=local end=] could dismiss a prompt by sending the following message:
+
+<pre highlight="json">
+{
+  "method": "bluetooth.handleRequestDevicePrompt",
+  "params": {
+    "context": "cxt-d03fdd81",
+    "prompt": "pmt-e0a234b",
+    "accept": true,
+    "device": "dvc-9b3b872"
+  }
+}
+</pre>
 </div>
 
 ### Events ### {#bidi-events}
